@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ShowBooks = ({book}) => {
     const {image , isbn13 , price , subtitle , title } = book
     return (
-        <div className='relative rounded-md hover:-translate-y-4 duration-300'>
+        <Link to={`/book/${isbn13}`} className='relative rounded-md hover:-translate-y-4 duration-300'>
         <div className='border-2 border-gray-100 drop-shadow-lg'>
             <img src={image} alt="" />
         </div>
@@ -12,7 +13,7 @@ const ShowBooks = ({book}) => {
             <h2 className='font-semibold'>{subtitle.slice(0,25) + "......"}</h2>
             <h2 className='font-semibold'>{price}</h2>
         </div>
-        </div>
+        </Link>
     );
 };
 
