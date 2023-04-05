@@ -1,10 +1,14 @@
 import React from 'react'
-
+import keyAnimation from "../../assets/key.json";
+import Lottie from "lottie-react";
 const About = () => {
   return (
-    <div className='mt-5'>
+    <div className='mt-3'>
+      <div className='w-full md:w-[300px] block mx-auto'>
+      <Lottie animationData={keyAnimation} loop={true} />
+      </div>
       <h2 className='text-center text-4xl font-bold'>A reader lives a thousand lives</h2>
-      <h2 className='text-center text-4xl font-bold mb-4'>before he dies</h2>
+      <h2 className='text-center text-4xl font-bold mb-5'>before he dies</h2>
       <p  className='text-center'>Books are a uniquely portable magic. Books serve to show a man that those original <br /> thoughts of his aren't very new after all. The man who does not read good books is <br /> no better than the man who can't.</p>
 
       <div className='md:grid grid-cols-2 gap-10 mt-10'>
