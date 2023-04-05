@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 
 const App = () => {
   return (
-    <div className='w-[95%] mx-auto'>
+    <div className='w-[95%] mx-auto mt-2'>
      <Nav></Nav>
      <Outlet></Outlet>
     </div>
