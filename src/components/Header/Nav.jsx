@@ -1,9 +1,16 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import {BookOpenIcon} from '@heroicons/react/24/solid'
 import './Nav.css'
 
 const Nav = () => {
     return (
+        <div className='flex justify-between items-center bg-gray-200 p-6'>
+            <div className='inline-flex items-center gap-3'>
+                <BookOpenIcon className="h-8 w-8 text-blue-500" />
+                <h2 className='text-2xl font-semibold'>BookShoop</h2>
+            </div>
+
         <div className='inline-flex gap-7 font-semibold'>
         <NavLink
         to="/"
@@ -20,6 +27,7 @@ const Nav = () => {
         className={({ isActive}) => isActive ? "active" : ""}>
         About us
         </NavLink>
+        </div>
         </div>
     );
 };
