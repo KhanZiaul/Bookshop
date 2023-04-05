@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { BookOpenIcon } from '@heroicons/react/24/solid'
 import './Nav.css'
 
 const Nav = () => {
+    const [navigation,setNavigation] = useState(false)
+    
     return (
         <div className='flex justify-between items-center bg-gray-200 p-6'>
             <Link to='/' className='inline-flex items-center gap-3'>
