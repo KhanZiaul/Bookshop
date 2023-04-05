@@ -6,9 +6,9 @@ import Footer from './components/Footer/Footer';
 const App = () => {
   return (
     <div className='w-[95%] mx-auto mt-2 '>
-     <Nav></Nav>
-     <Outlet></Outlet>
-     <Footer></Footer>
+      <Nav></Nav>
+      <Outlet></Outlet>
+      <Footer></Footer>
     </div>
   );
 };

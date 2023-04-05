@@ -5,7 +5,7 @@ import { ShoppingCartIcon } from '@heroicons/react/24/solid'
 import { Link } from 'react-router-dom';
 const Home = () => {
     return (
-        <div className='md:flex justify-between items-center gap-40 px-3'>
+        <div className='md:flex justify-between items-center gap-40 px-5'>
             <div >
                 <div className="bg-yellow-500 inline-block rounded-xl px-2 mb-5">ON SALE!</div>
 
