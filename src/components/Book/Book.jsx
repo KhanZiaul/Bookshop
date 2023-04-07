@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigation } from 'react-router-dom';
 import './Book.css'
+import Loading from '../LoaingSpinner/Loading';
 
 const Book = () => {
+    const loading = useNavigation()
+    if (loading.state === 'loading') {
+        return <Loading />
+    }
+
     const bookDetails = useLoaderData()
     // console.log(bookDetails)
     const { image, authors, publisher, price, rating, year, title, desc } = bookDetails;
@@ -15,16 +21,16 @@ const Book = () => {
             </div>
             <div className='mt-20'>
                 <div>
-                <p className='text-4xl font-bold mb-3'>{title}</p>
-                <p>Authors : {authors}</p>
-                <p>Publisher : {publisher}</p>
-                <p>Rating : {rating}</p>
-                <p className='mb-3'>Year : {year}</p>
+                    <p className='text-4xl font-bold mb-3'>{title}</p>
+                    <p>Authors : {authors}</p>
+                    <p>Publisher : {publisher}</p>
+                    <p>Rating : {rating}</p>
+                    <p className='mb-3'>Year : {year}</p>
                 </div>
                 <div className='flex'>
                     <div>
                         {
-                            less ? <p className='mb-5'>{desc}.....<span className='text-sky-500 cursor-pointer' onClick={() => setMore(!less)}>Read Less</span></p> : <p className='mb-5'>{desc.slice(0,150)}.....<span className='text-sky-500 cursor-pointer' onClick={() => setMore(!less)}>Read More</span></p>
+                            less ? <p className='mb-5'>{desc}.....<span className='text-sky-500 cursor-pointer' onClick={() => setMore(!less)}>Read Less</span></p> : <p className='mb-5'>{desc.slice(0, 150)}.....<span className='text-sky-500 cursor-pointer' onClick={() => setMore(!less)}>Read More</span></p>
                         }
                     </div>
                 </div>
