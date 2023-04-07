@@ -4,6 +4,7 @@ import './Book.css'
 import Loading from '../LoaingSpinner/Loading';
 
 const Book = () => {
+    
     const loading = useNavigation()
     if (loading.state === 'loading') {
         return <Loading />

@@ -1,13 +1,7 @@
 import React from 'react';
-import { Link, useNavigation } from 'react-router-dom';
-import Loading from '../LoaingSpinner/Loading';
+import { Link } from 'react-router-dom';
 
 const ShowBooks = ({ book }) => {
-
-    const loading = useNavigation()
-    if (loading.state === 'loading') {
-        return <Loading />
-    }
 
     const { image, isbn13, price, subtitle, title } = book
     return (
